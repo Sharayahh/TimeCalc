@@ -35,20 +35,20 @@ function TimeCalculator() {
   }
 
   return (
-    <div class="workCalcContainer">
+    <div className="workCalcContainer">
       <h5>Work Calculator</h5>
       {clockout && <div className="clockoutTime">{clockout}</div>}
       {result && <div className="resultTxt">{result}</div>}
-      <div class="calcBox">
+      <div className="calcBox">
       <input
-        class="numberOfHrs"
+        className="numberOfHrs"
         type="number"
         value={hoursWorked}
         onChange={(e) => setHoursWorked(e.target.value)}
         placeholder="Hours Worked e.g"
       />
       <input
-      class="timeOfHrs"
+      className="timeOfHrs"
         type="time"
         value={clockInTime}
         onChange={(e) => setClockInTime(e.target.value)}
@@ -56,7 +56,7 @@ function TimeCalculator() {
       />
       </div>
       
-      <button class="calculateTime" onClick={calculateNewHours}>Calculate New Hours</button>
+      <button className="calculateTime" onClick={calculateNewHours}>Calculate New Hours</button>
       
     </div>
   );
